@@ -1,0 +1,10 @@
+<h2>Sales Forecast Result</h2>
+<img src="data:image/png;base64, {{ forecast_plot }}" alt="Forecast Plot"/>
+
+<h3>Forecasted Values:</h3>
+<ul>
+{% for date, value in forecast.items %}
+    <li>{{ date }}: {{ value }}</li>
+{% endfor %}
+</ul>
+<a href="{% url 'forecast' %}">Back to input</a>

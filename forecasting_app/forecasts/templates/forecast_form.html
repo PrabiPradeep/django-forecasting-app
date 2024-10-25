@@ -1,0 +1,7 @@
+<h2>Sales Forecast</h2>
+<form method="POST">
+    {% csrf_token %}
+    <label for="horizon">Forecast Horizon (Months):</label>
+    <input type="number" name="horizon" min="1" required>
+    <button type="submit">Generate Forecast</button>
+</form>
